@@ -7,9 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 public class RegistrationServlet extends HttpServlet 
 {
-/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 public RegistrationServlet() {
 }
@@ -37,7 +34,7 @@ request.getRequestDispatcher("/Project.jsp").forward(request, response);
 else
 {
 request.setAttribute("errMessage", userRegistered);
-request.getRequestDispatcher("/Register.jsp").forward(request, response);
+request.getRequestDispatcher("/Registration.jsp").forward(request, response);
 }
 }
 }

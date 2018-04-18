@@ -13,8 +13,6 @@ String userName = registrationBean.getUserName();
 String password = registrationBean.getPassword();
 String address = registrationBean.getAddress();
 String contact = registrationBean.getContact();
-
-
 Connection con = null;
 PreparedStatement preparedStatement = null;
 try

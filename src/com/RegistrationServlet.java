@@ -29,7 +29,7 @@ RegistrationDao registrationDao = new RegistrationDao();
 String userRegistered = registrationDao.registrationUser(registrationBean);
 if(userRegistered.equals("SUCCESS"))   
 {
-request.getRequestDispatcher("/Project.jsp").forward(request, response);
+request.getRequestDispatcher("/ProjectSalesServlet.jsp").forward(request, response);
 }
 else
 {

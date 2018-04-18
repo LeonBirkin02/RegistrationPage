@@ -5,7 +5,7 @@ public class RegistrationDB {
 public static Connection createConnection()
 {
 Connection con = null;
-String url = "jdbc:mysql@localhost:3306/"; 
+String url = "jdbc:mysql@localhost:3306/users"; 
 String username = "root"; 
 String password = "Fukuhakrs1"; 
 try 

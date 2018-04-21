@@ -9,6 +9,7 @@ pageEncoding="ISO-8859-1"%>
 table {
 	border-style: solid;
 }
+<td style="float:left"><image src="file:///G:/College/Winter%202018/CSC%20363/Computer%20logo.png" width="100px" height="100px"></image></td>
 </style>
 
 <title>Registration</title>
@@ -65,15 +66,15 @@ return false;
 <table style="float:right">
 <tr>
 <td>First Name</td>
-<td><input type="text" name="firstname" /></td>
+<td><input type="text" name="firstName" /></td>
 </tr>
 <tr>
 <td>Last Name</td>
-<td><input type="text" name="lastname" /></td>
+<td><input type="text" name="lastName" /></td>
 </tr>
 <tr>
 <td>User Name</td>
-<td><input type="text" name="username" /></td>
+<td><input type="text" name="userName" /></td>
 </tr>
 <tr>
 <td>Password</td>

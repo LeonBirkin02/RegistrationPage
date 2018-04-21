@@ -14,9 +14,9 @@ public RegistrationServlet() {
 }
 
 protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-String firstName = request.getParameter("firstName");
-String lastName = request.getParameter("lastName");
-String userName = request.getParameter("userName");
+String firstName = request.getParameter("firstname");
+String lastName = request.getParameter("lastname");
+String userName = request.getParameter("username");
 String password = request.getParameter("password");
 String address = request.getParameter("address");
 String contact = request.getParameter("contact");

@@ -1,8 +1,7 @@
-package csc363;
+package com.mvc.LoginServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Serializable;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -10,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.mvc.User.User;
 
 
 /**
@@ -65,8 +66,8 @@ String url = "/WelcomeServlet.jsp";
         } 
         else if (action.equals("add")) {
             // get parameters from the request
-            String user = request.getParameter("user");
-            String pass = request.getParameter("pass");
+            String user = request.getParameter("username");
+            String pass = request.getParameter("password");
             
             // store data in User object
             User login = new User(user,pass);

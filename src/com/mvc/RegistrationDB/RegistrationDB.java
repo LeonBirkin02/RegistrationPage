@@ -1,11 +1,14 @@
-package com;
+package com.mvc.RegistrationDB;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+
 public class RegistrationDB {
+	
 public static Connection createConnection()
 {
 Connection con = null;
-String url = "jdbc:mysql@localhost:3306/users"; 
+String url = "jdbc:mysql@localhost:3306/project"; 
 String username = "root"; 
 String password = "password"; 
 try 

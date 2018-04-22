@@ -1,15 +1,17 @@
-package com;
+package com.mvc.RegistrationServlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.RegistrationBean;
-import com.RegistrationDao;
-public class RegistrationServlet extends HttpServlet 
-{
+
+import com.mvc.Bean.RegistrationBean;
+import com.mvc.Dao.RegistrationDao;
+public class RegistrationServlet extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
+
 public RegistrationServlet() {
 }
 
@@ -34,12 +36,25 @@ RegistrationDao registrationDao = new RegistrationDao();
 String userRegistered = registrationDao.registrationUser(registrationBean);
 if(userRegistered.equals("SUCCESS"))   
 {
-request.getRequestDispatcher("/Login.jsp").forward(request, response);
+request.getRequestDispatcher("/WelcomeServlet.jsp").forward(request, response);
 }
 else
 {
 request.setAttribute("errMessage", userRegistered);
-request.getRequestDispatcher("/Registration.jsp").forward(request, response);
+request.getRequestDispatcher("/WelcomeServlet.jsp").forward(request, response);
 }
+}
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	// TODO Auto-generated method stub
+	
+	String[] members = new String[4];
+	 members[0] = "Jamie W.";
+	 members[1] = "Evan D.";
+	 members[2] = "Tim D.";
+	 members[3] = "Hardware Plus";
+	 
+    request.setAttribute("members", members);
+    request.getRequestDispatcher("/Registration.jsp").forward(request, response);
 }
 }

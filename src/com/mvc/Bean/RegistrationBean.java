@@ -1,4 +1,5 @@
-package com;
+package com.mvc.Bean;
+
 public class RegistrationBean 
 
 {

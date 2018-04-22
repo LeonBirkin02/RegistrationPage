@@ -21,6 +21,7 @@ table, th, td {
         <title>Project Portal</title>
     </head>
     <body>
+    	<body bgcolor="#D3D3D3">
         <form method="post" action="LoginServlet">
            
             <td style="float:left"><image src="file:///G:/College/Winter%202018/CSC%20363/Computer%20logo.png" width="100px" height="100px"></image></td>
@@ -61,7 +62,7 @@ table, th, td {
                     </tr>
                     
                     <tr>
-                        <td colspan="2">Yet Not Registered!! <a href="Registration.jsp">Register Here</a></td>
+                        <td colspan="2">Yet Not Registered!! <a href="RegistrationServlet.jsp">Register Here</a></td>
                     </tr>
                     </form>
                     </div>

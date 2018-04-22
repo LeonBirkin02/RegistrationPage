@@ -1,29 +1,23 @@
-package csc363;
-
+package com.mvc.Logout;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class WelcomeServlet
+ * Servlet implementation class Logout
  */
-@WebServlet("/WelcomeServlet")
-public class WelcomeServlet extends HttpServlet {
+@WebServlet("/Logout")
+public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	
-	 String Member1 = "Jamie W.";
-	 String Member2 = "Evan D.";
-	 String Member3 = "Tim D.";
-	 String projectname = "Hardware Plus";
-	 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public WelcomeServlet() {
+    public Logout() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,15 +27,10 @@ public class WelcomeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		String[] members = new String[4];
-		 members[0] = "Jamie W.";
-		 members[1] = "Evan D.";
-		 members[2] = "Tim D.";
-		 members[3] = "Hardware Plus";
-		 
-        request.setAttribute("members", members);
-        request.getRequestDispatcher("/Welcome.jsp").forward(request, response);
+		HttpSession session = request.getSession(false);
+		if(session != null)
+		    session.invalidate();
+		request.getRequestDispatcher("/index.jsp").forward(request,response);
 	}
 
 	/**

@@ -6,10 +6,18 @@ pageEncoding="ISO-8859-1"%>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 <style>
-table {
-	border-style: solid;
+div.container {
+    //width: 100%;
+   // border: 1px solid gray;
+  //  padding:5px;
+
 }
-<td style="float:left"><image src="file:///G:/College/Winter%202018/CSC%20363/Computer%20logo.png" width="100px" height="100px"></image></td>
+
+table, th, td {
+   //border: 1px solid black;
+}
+.textright{float:right;padding:10px}
+
 </style>
 
 <title>Registration</title>
@@ -60,9 +68,18 @@ return false;
 } 
 </script> 
 </head>
+
+
 <body bgcolor="#D3D3D3">
-<h2> Registration </h2>
 <form name="form" action="RegistrationServlet" method="post" onsubmit="return validate()">
+<td style="float:left"><image src="file:///G:/College/Winter%202018/CSC%20363/Computer%20logo.png" width="100px" height="100px"></image></td>
+<p style="float:right"><b> ${members[3]} <br> CSC 363<br>Final Project</b></p>
+
+            <td style="clear:float"></td>
+            <p style="align-text"left">Team</p>
+            <p style="float:left">${members[0]} <br> ${members[1]} <br> ${members[2]} </p>
+            <td style="close:float"></td>
+
 <table style="float:right">
 <tr>
 <td>First Name</td>
@@ -96,6 +113,7 @@ return false;
 <tr>
 <td></td>
 <td><input type="submit" value="Submit"></input>
+<input type="reset" value="Reset"></input></td>
 </tr>
 </table>
 </form>
